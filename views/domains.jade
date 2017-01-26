@@ -1,6 +1,7 @@
 extends layout
 
-block content
+append content
+	- var userStatus = user
 	if(rows.length)
 		.container
 			.row
