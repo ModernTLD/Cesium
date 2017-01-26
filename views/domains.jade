@@ -1,0 +1,78 @@
+extends layout
+
+block content
+	header
+		nav
+			.nav-wrapper.teal
+					a.brand-logo(href='#', style='padding-left: 40px; padding-right: 40px;') TLD.O
+					a.button-collapse(href='#', data-activates='mobile-demo')
+						i.material-icons menu
+					ul#nav-mobile.right.hide-on-med-and-down
+						li
+							a(href='/domains') Domains
+						li
+							a.btn(href='/logout') Logout
+					ul#mobile-demo.side-nav
+						li
+							a(href='/domains') Domains
+						li
+							a.btn(href='/logout') Logout
+	if(rows.length)
+		.container
+			.row
+				.col.s12
+					table.pure-table.pure-table-bordered
+						thead
+							tr
+								th Domain
+								th Nameserver
+							tbody
+							each row in rows
+								tr
+									td #{row.domain}
+									td #{row.nameserver}
+					br
+			.row
+				.col.s12.l6
+					b Register a Domain:
+					br
+					form(action='registerdomain', method='post')
+						| Domain:
+						br
+						input(type='text', name='domain', required='required')
+						br
+						| Nameserver
+						br
+						input(type='text', name='nameserver', required='required')
+						br
+						br
+						input.btn(type='submit', value='Submit')
+				.col.s12.l6
+					b Change nameservers for a domain:
+					br
+					form(action='changenameservers', method='post')
+						select.browser-default(name='domain')
+							each row in rows
+								option(value=row.domain) #{row.domain}
+						br
+						|  Nameserver:
+						br
+						input(type='text', name='nameserver', required='required')
+						br
+						input.btn(type='submit')
+	else
+		.container
+			p
+				b You don't have any domains! Why not register one?
+			form(action='registerdomain', method='post')
+				| Domain:
+				br
+				input(type='text', name='domain')
+				br
+				| External Nameserver:
+				br
+				input(type='text', name='nameserver')
+				br
+				br
+				input.btn(type='submit', value='Submit')
+

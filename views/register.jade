@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	.container
+		h2 Register
+		p.lead Register a ModernTLD Registry account here!
+		br
+		form.col.s12(role='form', action='/register', method='post')
+			.form-group
+				input.form-control(type='text', name='username', placeholder='Enter Username')
+			.form-group
+				input.form-control(type='password', name='password', placeholder='Password')
+			button.btn.btn-default(type='submit') Submit
+			a.btn(href='/') Cancel
