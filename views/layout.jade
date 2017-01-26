@@ -7,11 +7,6 @@ html
 		link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
 	body
 		block content
-
-			script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
-			script(type='text/javascript', src='materialize.js')
-			script.
-				$( document ).ready(function(){ $(".button-collapse").sideNav(); });
 			if(!user)
 				header
 					nav
@@ -46,3 +41,10 @@ html
 									a(href='/domains') Domains
 								li
 									a.btn(href='/logout') Logout
+
+		block content
+
+			script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
+			script(type='text/javascript', src='materialize.js')
+			script.
+				$( document ).ready(function(){ $(".button-collapse").sideNav(); });
