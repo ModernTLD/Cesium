@@ -7,7 +7,40 @@ html
 		link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
 	body
 		block content
-
+			if(!userStatus)
+				header
+					nav
+						.nav-wrapper.teal
+							a.brand-logo(href='#', style='padding-left: 40px; padding-right: 40px;') TLD.O
+							a.button-collapse(href='#', data-activates='mobile-demo')
+								i.material-icons menu
+							ul#nav-mobile.right.hide-on-med-and-down
+								li
+									a(href='/register') Register
+								li
+									a.btn(href='/login') Login
+							ul#mobile-demo.side-nav
+								li
+									a(href='/register') Register
+								li
+									a.btn(href='/login') Login
+			else
+				header
+					nav
+						.nav-wrapper.teal
+							a.brand-logo(href='#', style='padding-left: 40px; padding-right: 40px;') TLD.O
+							a.button-collapse(href='#', data-activates='mobile-demo')
+								i.material-icons menu
+							ul#nav-mobile.right.hide-on-med-and-down
+								li
+									a(href='/domains') Domains
+								li
+									a.btn(href='/logout') Logout
+							ul#mobile-demo.side-nav
+								li
+									a(href='/domains') Domains
+								li
+									a.btn(href='/logout') Logout
 			script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
 			script(type='text/javascript', src='materialize.js')
 			script.
