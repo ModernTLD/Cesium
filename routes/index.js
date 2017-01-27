@@ -40,7 +40,7 @@ router.get('/login', function(req, res) {
 });
 
 router.post('/login', passport.authenticate('local', { failureRedirect: '/no', failureFlash: false }), function(req, res) {
-        res.redirect('/');
+        res.redirect('/domains');
 });
 
 router.post('/registerdomain', function(req, res) {
