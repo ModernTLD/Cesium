@@ -1,3 +1,45 @@
 extends layout
 
 append content
+	.container.center
+		h1 .O Registrations
+		p
+			a(href='https://www.moderntld.com') ModernTLD
+			|  is offering domain name registrations for the .o namespace at this domain. Click "Login" below to claim your domain today!
+		a.waves-effect.waves-light.btn-large(style='margin: 10px;', href='login.html')
+			i.material-icons.left perm_identity
+			| Login
+		// <a class="waves-effect waves-light btn-large red darken-1" style="margin: 10px;" href="logout.html"><i class="material-icons left">perm_identity</i>Logout</a>
+		a.waves-effect.waves-light.btn-large.amber(style='margin: 10px;', href='policies.html')
+			i.material-icons.left subject
+			| Policies
+		br
+		br
+	.container
+		.row
+			.col.s12.m4
+				.center.promo
+					i.material-icons.large.light-blue-text.text-darken-3 visibility_off
+					p.promo-caption Reserve Your Place
+					p.light.center
+						| Get a .o domain for FREE today and claim your place on the OpenNIC network, a user owned and controlled Network Information Center offering a democratic alternative to the traditional ICANN Top-Level Domain registries.
+			.col.s12.m4
+				.center.promo
+					i.material-icons.large.light-green-text lock
+					p.promo-caption Free SSL Certificate
+					p.light.center
+						| Every domain registration comes with a corresponding SSL certificate signed by the
+						a(href='https://www.moderntld.com/ca') ModernTLD CA
+						| . Note: These certificates are untrusted by default in most major browsers because OpenNIC is not a part of the ICANN network. You will have to
+						a(href='https://www.moderntld.com/ca') install it manually
+						| . This is normal behavior.
+			.col.s12.m4
+				.center.promo
+					i.material-icons.large.red-text dns
+					p.promo-caption Resiliant DNS
+					p.light.center
+						| We not only operate two authoratative "Tier 1" servers for the root zone, but our zone is replicated across a multitude of Tier 1 and Tier 2 servers, ensuring your site can virtually never go down due to DNS issues. Check out the list of
+						a(href='https://servers.opennicproject.org/') OpenNIC servers
+						|  or
+						a(href='http://health.moderntld.com/') ModernTLD Health Statistics
+						| .

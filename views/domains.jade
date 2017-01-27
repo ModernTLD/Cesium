@@ -39,6 +39,7 @@ append content
 							each row in rows
 								option(value=row.domain) #{row.domain}
 						br
+						br
 						|  Nameserver:
 						br
 						input(type='text', name='nameserver', required='required')
@@ -59,3 +60,5 @@ append content
 				br
 				br
 				input.btn(type='submit', value='Submit')
+	br
+	a(href="/logout") Logout
