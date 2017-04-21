@@ -1,3 +1,0 @@
-database:
-  override:
-    - mysql -u ubuntu circle_test < _schema_pdns.sql
