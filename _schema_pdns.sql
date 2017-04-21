@@ -17,7 +17,7 @@ CREATE TABLE records (
   domain_id             INT DEFAULT NULL,
   name                  VARCHAR(255) DEFAULT NULL,
   type                  VARCHAR(10) DEFAULT NULL,
-  content               VARCHAR(21845) DEFAULT NULL,
+  content               TEXT DEFAULT NULL,
   ttl                   INT DEFAULT NULL,
   prio                  INT DEFAULT NULL,
   change_date           INT DEFAULT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE comments (
   type                  VARCHAR(10) NOT NULL,
   modified_at           INT NOT NULL,
   account               VARCHAR(40) NOT NULL,
-  comment               VARCHAR(21845) NOT NULL,
+  comment               TEXT NOT NULL,
   PRIMARY KEY (id)
 ) Engine=InnoDB;
 
