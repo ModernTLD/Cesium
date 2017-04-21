@@ -1,6 +1,13 @@
 extends layout
 
-block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+append head
+  if (locals.redirect)
+    meta(http-equiv="refresh" content=redirect)
+
+append content
+  .container
+    .row
+      .col.s12
+        .card-panel.red
+          h1= error.message
+          pre #{error.stack}
