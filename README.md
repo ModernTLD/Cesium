@@ -20,7 +20,8 @@ The example file is `config.json.example`.
 | port | integer | the port on which the Express server should run on |
 
 ### Database --database--
-_(MySQL connection)_
+_(MySQL connection)_ 
+
 | key | value type | details |
 | --- | --- | --- |
 | host | string | the host of the MySQL server |
