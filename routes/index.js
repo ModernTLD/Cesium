@@ -2,14 +2,8 @@ var express = require('express');
 var passport = require('passport');
 var Account = require('../models/account');
 var PowerDNSDb = require('../models/database');
-var databaseConfig = require('../config.json').database;
 var router = express.Router();
 var fs = require('fs');
-var mysql = require('mysql');
-const dateTime = Date.now();
-const timestamp = Math.floor(dateTime / 1000);
-var domainToUsername = mysql.createConnection(databaseConfig);
-domainToUsername.connect();
 
 
 router.get('/', function (req, res) {
