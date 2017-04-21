@@ -11,6 +11,7 @@ var LocalStrategy = require('passport-local').Strategy;
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var webConfig = require('./config.json').web;
 
 var app = express();
 
@@ -35,6 +36,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', routes);
+var listener = app.listen(webConfig.port, function(){
+    console.log('Listening on port ' + listener.address().port); //Listening on port 8888
+});
 
 // passport config
 var Account = require('./models/account');
