@@ -16,13 +16,13 @@ The example file is `config.json.example`.
 
 ### Web --web--
 | key | value type | details |
-| - | - |
+| --- | --- | --- |
 | port | integer | the port on which the Express server should run on |
 
 ### Database --database--
 _(MySQL connection)_
 | key | value type | details |
-| - | - |
+| --- | --- | --- |
 | host | string | the host of the MySQL server |
 | user | string | the username of the MySQL server |
 | password | string | the password of the MySQL server |
