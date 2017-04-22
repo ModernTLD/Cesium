@@ -1,32 +1,31 @@
 # Site settings
 title: ModernTLD
-site: Theme
+site: Cesium
 description: > # this means to ignore newlines until "baseurl:"
-    Write an awesome description for your new site here. You can edit this
-    line in _config.yml. It will appear in your document head meta (for
-    Google search results) and in your feed.xml site description.
+    Cesium is a domain registry system created for use on the OpenNIC Network
+    for ModernTLD and the .o Top-Level Domain.
 baseurl: ""
 paginate: 5
 paginate_path: "/page:num/"
 color:
-    main: "orange"
-    navbar: "orange"
-    chips: "green"
-    footer: "blue"
+    main: "blue-grey"
+    navbar: "blue-grey"
+    chips: "orange"
+    footer: "teal"
 owner:
-    email: theme.email@moderntld.com
+    email: cesium@moderntld.com
     facebook:
         show: false
-        name: "Ichihara Rifa"
-        url: "https://fb.me/nasya.aidan"
+        name: "ModernTLD"
+        url: "n/a"
     github:
         show: true
         username: "ModernTLD"
     twitter:
-        show: true
+        show: false
         username: "ModernTLD"
     disqus:
-        show: true
+        show: false
         username: "jonaharagon"
 sass:
     sass_dir: _sass
